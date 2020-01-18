@@ -1,16 +1,14 @@
-import {
-  IMAGES_LOAD_FAIL,
-  IMAGES_LOAD_SUCCESS,
-  IMAGE_LOAD
-} from '../actions/types';
+import { IMAGES } from '../constants';
 
 const loadingReducer = (state = false, action) => {
   switch (action.type) {
-    case IMAGE_LOAD:
+    case IMAGES.LOAD:
       return true;
-    case IMAGES_LOAD_SUCCESS:
-    case IMAGES_LOAD_FAIL:
+    case IMAGES.LOAD_SUCCESS:
       return false;
+    case IMAGES.LOAD_FAIL:
+      return false;
+
     default:
       return state;
   }

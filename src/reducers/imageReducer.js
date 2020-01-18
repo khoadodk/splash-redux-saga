@@ -1,10 +1,10 @@
-import { IMAGES_LOAD_SUCCESS } from '../actions/types';
+import { IMAGES } from '../constants';
 
-const imageReducer = (state = {}, action) => {
-  if (action.type === IMAGES_LOAD_SUCCESS) {
+const imagesReducer = (state = [], action) => {
+  if (action.type === IMAGES.LOAD_SUCCESS) {
     return [...state, ...action.images];
   }
   return state;
 };
 
-export default imageReducer;
+export default imagesReducer;

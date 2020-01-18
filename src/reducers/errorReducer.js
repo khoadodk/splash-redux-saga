@@ -1,16 +1,13 @@
-import {
-  IMAGES_LOAD_FAIL,
-  IMAGE_LOAD,
-  IMAGES_LOAD_SUCCESS
-} from '../actions/types';
+import { IMAGES } from '../constants';
 
 const errorReducer = (state = null, action) => {
   switch (action.type) {
-    case IMAGES_LOAD_FAIL:
+    case IMAGES.LOAD_FAIL:
       return action.error;
-    case IMAGES_LOAD_SUCCESS:
-    case IMAGE_LOAD:
+    case IMAGES.LOAD:
+    case IMAGES.LOAD_SUCCESS:
       return null;
+
     default:
       return state;
   }

@@ -1,16 +1,16 @@
-import { IMAGE_LOAD, IMAGES_LOAD_FAIL, IMAGES_LOAD_SUCCESS } from './types';
+import { IMAGES } from '../constants';
 
 const loadImages = () => ({
-  type: IMAGE_LOAD
+  type: IMAGES.LOAD
 });
 
 const setImages = images => ({
-  type: IMAGES_LOAD_SUCCESS,
+  type: IMAGES.LOAD_SUCCESS,
   images
 });
 
 const setError = error => ({
-  type: IMAGES_LOAD_FAIL,
+  type: IMAGES.LOAD_FAIL,
   error
 });
 
