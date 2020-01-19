@@ -28,6 +28,9 @@ img {
   width: 100%;
   object-fit: cover;
 }
+.item {
+  position: relative;
+}
 
 .item-1 {
   grid-row: span 1;

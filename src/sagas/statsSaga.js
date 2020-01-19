@@ -8,7 +8,7 @@ import {
   setImageStatsError
 } from '../actions/imageActions';
 
-function* handleStatsRequest(id) {
+export function* handleStatsRequest(id) {
   try {
     yield put(loadImageStats(id));
     const res = yield call(fetchImageStats, id);

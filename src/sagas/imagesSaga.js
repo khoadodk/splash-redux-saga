@@ -10,9 +10,9 @@ import { fetchImages } from '../api';
     4. An action to update the state is dispatched( setImages or setError)
 */
 
-const getPage = state => state.nextPage;
+export const getPage = state => state.nextPage;
 
-function* handleImagesLoad() {
+export function* handleImagesLoad() {
   try {
     //pulling the nextPage from the state
     const page = yield select(getPage);
